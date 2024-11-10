@@ -1,20 +1,15 @@
 package batch;
 
 /**
- * Main application class.
+ * Simple Java application that displays a message.
  */
 public class App {
     public static void main(String[] args) {
-        String name = "Varnika";
-        System.out.println("Hello, " + name + "!");
+        System.out.println("Hello, Varnika!");
     }
 
-    /**
-     * Method to return a greeting message.
-     * @param name - The name to be greeted.
-     * @return Greeting message.
-     */
-    public String getGreeting(String name) {
-        return "Hello, " + name + "!";
+    // Method to return the greeting message
+    public String getGreeting() {
+        return "Hello, Varnika!";
     }
 }
