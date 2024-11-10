@@ -1,19 +1,16 @@
 package batch;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
-import org.junit.jupiter.api.Test;
-
 /**
- * Unit test for simple App.
+ * Main class to display the name "Varnika".
  */
-public class AppTest {
+public class App {
+    public static void main(String[] args) {
+        // Display the name "Varnika"
+        System.out.println("Hello, Varnika!");
+    }
 
-    /**
-     * Rigorous Test :-)
-     */
-    @Test
-    public void shouldAnswerWithTrue() {
-        assertTrue(true);
+    // Method to get the name
+    public String getName() {
+        return "Varnika";
     }
 }
