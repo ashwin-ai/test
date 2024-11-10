@@ -1,10 +1,20 @@
 package batch;
 
 /**
- * Hello world!
+ * Main application class.
  */
 public class App {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        String name = "Varnika";
+        System.out.println("Hello, " + name + "!");
+    }
+
+    /**
+     * Method to return a greeting message.
+     * @param name - The name to be greeted.
+     * @return Greeting message.
+     */
+    public String getGreeting(String name) {
+        return "Hello, " + name + "!";
     }
 }
