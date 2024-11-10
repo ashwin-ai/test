@@ -13,6 +13,12 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        
+        <!-- SonarQube properties -->
+        <sonar.projectKey>my-web-app</sonar.projectKey> <!-- Replace with your project key -->
+        <sonar.projectName>My Web Application</sonar.projectName> <!-- Replace with your project name -->
+        <sonar.host.url>http://13.126.162.5:9000/</sonar.host.url> <!-- SonarQube server URL -->
+        <sonar.login>squ_3746a387077fa279abbdfd0b4f3119704e56cc1a</sonar.login> <!-- SonarQube token -->
     </properties>
 
     <dependencies>
@@ -53,13 +59,5 @@
             </plugin>
         </plugins>
     </build>
-
-    <properties>
-        <!-- SonarQube properties -->
-        <sonar.projectKey>my-web-app</sonar.projectKey> <!-- Replace with your project key -->
-        <sonar.projectName>My Web Application</sonar.projectName> <!-- Replace with your project name -->
-        <sonar.host.url>http://13.126.162.5:9000/</sonar.host.url> <!-- SonarQube server URL -->
-        <sonar.login>squ_3746a387077fa279abbdfd0b4f3119704e56cc1a</sonar.login> <!-- SonarQube token -->
-    </properties>
 
 </project>
