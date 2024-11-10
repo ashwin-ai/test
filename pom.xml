@@ -44,6 +44,22 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.2</version> <!-- Use a stable version -->
             </plugin>
+
+            <!-- SonarQube Plugin for Code Analysis -->
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.9.1.2184</version>
+            </plugin>
         </plugins>
     </build>
+
+    <properties>
+        <!-- SonarQube properties -->
+        <sonar.projectKey>my-web-app</sonar.projectKey> <!-- Replace with your project key -->
+        <sonar.projectName>My Web Application</sonar.projectName> <!-- Replace with your project name -->
+        <sonar.host.url>http://13.126.162.5:9000/</sonar.host.url> <!-- SonarQube server URL -->
+        <sonar.login>squ_3746a387077fa279abbdfd0b4f3119704e56cc1a</sonar.login> <!-- SonarQube token -->
+    </properties>
+
 </project>
