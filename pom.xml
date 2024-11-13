@@ -32,6 +32,9 @@
     </dependencies>
 
     <build>
+        <!-- Set the output file name to "varnika.war" -->
+        <finalName>varnika</finalName>
+        
         <plugins>
             <!-- Compiler Plugin for Java 11 -->
             <plugin>
