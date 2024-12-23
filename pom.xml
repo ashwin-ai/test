@@ -17,8 +17,8 @@
         <!-- SonarQube properties -->
         <sonar.projectKey>my-web-app</sonar.projectKey>
         <sonar.projectName>My Web Application</sonar.projectName>
-        <sonar.host.url>http://13.126.162.5:9000/</sonar.host.url>
-        <sonar.login>squ_3746a387077fa279abbdfd0b4f3119704e56cc1a</sonar.login>
+        <sonar.host.url>http://localhost:9000/</sonar.host.url>
+        <sonar.login>squ_bc574f3aae71e2fd7e8b4b618b3e7556f849f7cd</sonar.login>
     </properties>
 
     <dependencies>
