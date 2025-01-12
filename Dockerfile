@@ -1,27 +1,22 @@
-# Build stage
-FROM maven:3.8.1-openjdk-11 as build
+# Set base image
+FROM python:3.9-slim
 
-# Set the working directory for the build stage
+# Set working directory
 WORKDIR /app
 
-# Copy the pom.xml and source code
-COPY pom.xml /app/
-COPY src /app/src
+# Copy requirements.txt (ensure it's in the same directory as the Dockerfile)
+COPY requirements.txt /app/
 
-# Run Maven to build the project
-RUN mvn clean package
+# Install dependencies
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Production stage
-FROM openjdk:11-jre-slim
+# Copy the rest of the application files
+ COPY ./path/to/requirements.txt /app/
 
-# Set the working directory for the production image
-WORKDIR /app
 
-# Copy the JAR file from the build stage into the production image
-COPY --from=build /app/target/*.jar /app/app.jar
+# Set the command to run your application
+CMD ["python", "app.py"]
 
-# Expose the port the application will run on
-EXPOSE 8080
 
-# Command to run the application
-CMD ["java", "-jar", "app.jar"]
+
+
