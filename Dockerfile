@@ -5,15 +5,13 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Copy the requirements.txt first to leverage caching
-COPY  python-app/requirements.txt /app/
-
+COPY python-app/requirements.txt /app/
 
 # Install Python dependencies from the requirements file
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the files into the working directory
-COPY  python-app/requirements.txt /app/
-
+COPY python-app/ /app/
 
 # Expose port 5000 for the app
 EXPOSE 5000
