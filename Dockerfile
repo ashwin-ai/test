@@ -11,7 +11,8 @@ COPY requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the files into the working directory
-COPY . /app/
+COPY  python-app/requirements.txt /app/
+
 
 # Expose port 5000 for the app
 EXPOSE 5000
