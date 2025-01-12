@@ -1,40 +1,14 @@
-# Set base image
-FROM python:3.9-slim
+# Use a base image with Tomcat or a similar servlet container
+FROM tomcat:9.0-jdk11-openjdk
 
-# Set working directory
-WORKDIR /app
+# Remove the default web apps (optional)
+RUN rm -rf /usr/local/tomcat/webapps/*
 
-# Copy requirements.txt (ensure it's in the same directory as the Dockerfile)
-COPY # Set base image
-FROM python:3.9-slim
+# Copy the WAR file to the Tomcat webapps directory
+COPY target/varnika.war /usr/local/tomcat/webapps/varnika.war
 
-# Set working directory
-WORKDIR /app
+# Expose port 8080 for Tomcat
+EXPOSE 8080
 
-# Copy requirements.txt (ensure it's in the same directory as the Dockerfile)
-COPY ./path/to/requirements.txt /app/
-
-# Install dependencies
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Copy the rest of the application files
- COPY ./path/to/requirements.txt /app/
-
-
-# Set the command to run your application
-CMD ["python", "app.py"]
-
-
-# Install dependencies
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Copy the rest of the application files
- COPY ./path/to/requirements.txt /app/
-
-
-# Set the command to run your application
-CMD ["python", "app.py"]
-
-
-
-
+# Start Tomcat
+CMD ["catalina.sh", "run"]
